@@ -45,7 +45,7 @@ console.log(remainder, raised, greater, equal)
 
 //2.1
 
-const avgGrade = 67;
+const avgGrade = 88;
 
 if (avgGrade >=90) {
     console.log("Excellent")
@@ -115,14 +115,14 @@ console.log(student);
 
 //3.2
 
-const Student = {
+const student1 = {
     fullName: firstName + " " + lastName,
     program: university,
     year: yearOfStudy,
     averageGrade: 8
 };
 
-console.log(Student);
+console.log(student1);
 
 //3.3
 
@@ -134,3 +134,30 @@ console.log(student)
 
 //3.4
 
+student.avgGrade = 88;
+student.getStatus = function() {
+    if (this.avgGrade >= 90) {
+        return "Excellent student";
+    } 
+    if (this.avgGrade >= 70 && this.avgGrade <= 89) {
+        return "Good student";
+    } 
+    return "Needs improvement";
+};
+
+console.log(student.getStatus());
+
+//4.1
+
+const student2 = {
+    firstName: firstName,
+    lastName: lastName,
+    age: age,
+    program: university,
+    averageGrade: 8,
+    xreditsCompiled: 555
+};
+
+console.log(student2)
+
+//4.2

@@ -106,7 +106,7 @@ const student = {
     lastName: lastName,
     age: age,
     studentId: "IT24067",
-    program: university,
+    program: "IT",
     year: yearOfStudy,
     averageGrade: 8
 };
@@ -117,7 +117,7 @@ console.log(student);
 
 const student1 = {
     fullName: firstName + " " + lastName,
-    program: university,
+    program: "IT",
     year: yearOfStudy,
     averageGrade: 8
 };
@@ -128,7 +128,7 @@ console.log(student1);
 
 student.avgGrade = 7;
 student.year = 4
-student.email = "arturs.lidumsva.lv";
+student.email = "arturs.lidums@va.lv";
 
 console.log(student)
 
@@ -153,11 +153,62 @@ const student2 = {
     firstName: firstName,
     lastName: lastName,
     age: age,
-    program: university,
+    program: "IT",
     averageGrade: 8,
-    xreditsCompiled: 555
+    creditsCompleted: 95
 };
 
 console.log(student2)
 
 //4.2
+
+student.avgGrade = 88;
+
+if (age >= 18 && avgGrade >= 50) {
+    console.log("Registration Status: Eligible")
+}
+else {
+    console.log("Registration Status: Not Eligible")
+}
+
+//4.3
+
+student.avgGrade = 88;
+
+
+let courseFee = 500;
+let discount1 = 0;
+
+if (student.avgGrade >= 90) {
+    discount1 = 0.25;
+} else if (student.avgGrade >= 80 && student.avgGrade <= 89) {
+    discount1 = 0.15;
+} else if (student.avgGrade >= 70 && student.avgGrade <= 79) {
+    discount1 = 0.10;
+}
+
+const discountAmount = courseFee * discount1;
+const finalFee = courseFee - discountAmount;
+
+console.log("Final course fee:", finalFee);
+
+//4.4
+
+student.creditsCompleted = 88;
+
+let studyLevel = "";
+
+if (student.creditsCompleted < 30) {
+    studyLevel = "Beginner";
+} else if (student.creditsCompleted >= 30 && student.creditsCompleted <= 59) {
+    studyLevel = "Intermediate";
+} else if (student.creditsCompleted >= 60 && student.creditsCompleted <= 119) {
+    studyLevel = "Advanced";
+} else {
+    studyLevel = "Graduating";
+}
+
+
+//4.5
+
+console.log("\n----- STUDENT REPORT -----\n\nName Name: " + firstName + " " + lastName + "\nProgram: " + student.program + "\nAverage Grade: " + avgGrade + "\nEligibility: " + ((age >= 18 && student.avgGrade >= 50) ? "Eligible" : "Not Eligible") + "\nCourse Fee: " + finalFee + "\nStudy Level: " + studyLevel + "\n\n-------------------------- ")

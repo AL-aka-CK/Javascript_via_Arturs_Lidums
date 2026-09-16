@@ -1,1 +1,1 @@
-For file 16-09praktiskais.js. in tasks there was needed to create multiple variables with same name (students). in order to execute whole file at once those names were needed to be changed a bit(students1, students2)
+For file 16-09praktiskais.js. in tasks there was needed to create multiple variables with same name (student). in order to execute whole file at once those names were needed to be changed a bit(student1, student2)
